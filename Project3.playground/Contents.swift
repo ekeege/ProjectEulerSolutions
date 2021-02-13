@@ -6,23 +6,21 @@ import Foundation
 //Answer:  6857
 
 let number: Int = 600_851_475_143
-var largestPrimeFactor: Int? = nil
+var largestPrimeFactor: Int?
 
 for i in 2...number {
-  if number.isMultiple(of: i) {
-    if isPrimeNumber(i) {
-      largestPrimeFactor = i
-    }
+  if number.isMultiple(of: i) && isPrimeNumber(i) {
+    largestPrimeFactor = i
   }
 }
 
 func isPrimeNumber(_ number: Int) -> Bool {
-  if number == 0 || number == 1 {
+  if (number == 0 || number == 1) {
     return false
   }
   else {
     for i in 2..<number {
-      if number % i == 0 {
+      if (number % i == 0) {
         return false
       }
     }
