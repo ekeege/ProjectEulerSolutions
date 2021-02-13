@@ -21,10 +21,11 @@ func fibonacci(_ n: Int) -> Int {
 }
 
 var sum: Int = 0
+var number: Int = 0
 
 for i in 0... {
-  if sum <= 4_000_000 {
-    let number: Int = fibonacci(i)
+  if number <= 4_000_000 {
+    number = fibonacci(i)
     if number.isMultiple(of: 2) {
       sum += number
     }
