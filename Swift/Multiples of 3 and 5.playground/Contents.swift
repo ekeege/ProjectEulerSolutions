@@ -5,6 +5,12 @@ import Foundation
 //Find the sum of all the multiples of 3 or 5 below 1000.
 //Answer:  233168
 
-let sum: Int = [Int](1..<1000).filter {
-  $0 % 3 == 0 || $0 % 5 == 0
-}.reduce(0, +)
+var sum: Int = 0
+
+for number in 1..<1000 {
+  if  number % 3 == 0 || number % 5 == 0 {
+    sum += number
+  }
+}
+
+sum

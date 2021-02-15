@@ -26,7 +26,7 @@ var number: Int = 0
 for i in 0... {
   if number <= 4_000_000 {
     number = fibonacci(i)
-    if number.isMultiple(of: 2) {
+    if number % 2 == 0 {
       sum += number
     }
   } else {

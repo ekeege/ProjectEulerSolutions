@@ -9,7 +9,7 @@ let number: Int = 600_851_475_143
 var largestPrimeFactor: Int?
 
 for i in 2...number {
-  if number.isMultiple(of: i) && isPrimeNumber(i) {
+  if number % i == 0 && isPrimeNumber(i) {
     largestPrimeFactor = i
   }
 }
